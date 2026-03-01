@@ -13,7 +13,9 @@ const PasswordForm = ({ config, setConfig }) => {
         <div className="password-form">
             <div className="form-group">
                 <label>
-                    Length: {config.length}
+                    <span>
+                        Password Length: <strong>{config.length}</strong>
+                    </span>
                     <input
                         type="range"
                         name="length"
@@ -25,6 +27,7 @@ const PasswordForm = ({ config, setConfig }) => {
                     />
                 </label>
             </div>
+
 
             <div className="checkbox-group">
                 <div className="form-group">

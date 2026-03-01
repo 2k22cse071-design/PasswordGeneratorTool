@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PasswordForm from './components/PasswordForm';
 import PasswordDisplay from './components/PasswordDisplay';
+import StrengthIndicator from './components/StrengthIndicator';
 import { generatePassword } from './utils/generatePassword';
 
 function App() {
@@ -20,11 +21,16 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Password Generator</h1>
-      <PasswordDisplay password={password} onGenerate={handleGenerate} />
-      <PasswordForm config={config} setConfig={setConfig} />
+      <div className="password-card">
+        <h1>Password Generator </h1>
+        <PasswordDisplay password={password} onGenerate={handleGenerate} />
+        <StrengthIndicator password={password} config={config} />
+        <hr className="divider" />
+        <PasswordForm config={config} setConfig={setConfig} />
+      </div>
     </div>
   );
 }
 
 export default App;
+
