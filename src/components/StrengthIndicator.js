@@ -3,7 +3,7 @@ import React from 'react';
 const StrengthIndicator = ({ password, config }) => {
     const calculateStrength = () => {
         if (!password) return { label: '', color: 'transparent', width: '0%' };
-
+// let score=0;
         let score = 0;
         const length = password.length;
 
